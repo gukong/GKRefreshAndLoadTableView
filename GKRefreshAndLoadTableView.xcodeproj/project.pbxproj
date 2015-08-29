@@ -14,8 +14,8 @@
 		770739461B860C3F003970B7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 770739441B860C3F003970B7 /* LaunchScreen.xib */; };
 		770739521B860C3F003970B7 /* GKRefreshAndLoadTableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 770739511B860C3F003970B7 /* GKRefreshAndLoadTableViewTests.m */; };
 		7707395D1B860D1E003970B7 /* GKRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7707395C1B860D1E003970B7 /* GKRootViewController.m */; };
-		77B76F0D1B8F435F00114A6F /* GKIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B76F0A1B8F435F00114A6F /* GKIndicatorView.m */; };
-		77B76F0E1B8F435F00114A6F /* UIScrollView+GKRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B76F0C1B8F435F00114A6F /* UIScrollView+GKRefresh.m */; };
+		776C11491B913E110071437C /* GKIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 776C11461B913E110071437C /* GKIndicatorView.m */; };
+		776C114A1B913E110071437C /* UIScrollView+GKRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 776C11481B913E110071437C /* UIScrollView+GKRefresh.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,10 +42,10 @@
 		770739511B860C3F003970B7 /* GKRefreshAndLoadTableViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GKRefreshAndLoadTableViewTests.m; sourceTree = "<group>"; };
 		7707395B1B860D1E003970B7 /* GKRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKRootViewController.h; sourceTree = "<group>"; };
 		7707395C1B860D1E003970B7 /* GKRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKRootViewController.m; sourceTree = "<group>"; };
-		77B76F091B8F435F00114A6F /* GKIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKIndicatorView.h; sourceTree = "<group>"; };
-		77B76F0A1B8F435F00114A6F /* GKIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKIndicatorView.m; sourceTree = "<group>"; };
-		77B76F0B1B8F435F00114A6F /* UIScrollView+GKRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+GKRefresh.h"; sourceTree = "<group>"; };
-		77B76F0C1B8F435F00114A6F /* UIScrollView+GKRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+GKRefresh.m"; sourceTree = "<group>"; };
+		776C11451B913E110071437C /* GKIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKIndicatorView.h; sourceTree = "<group>"; };
+		776C11461B913E110071437C /* GKIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKIndicatorView.m; sourceTree = "<group>"; };
+		776C11471B913E110071437C /* UIScrollView+GKRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+GKRefresh.h"; sourceTree = "<group>"; };
+		776C11481B913E110071437C /* UIScrollView+GKRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+GKRefresh.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +87,7 @@
 		770739341B860C3F003970B7 /* GKRefreshAndLoadTableView */ = {
 			isa = PBXGroup;
 			children = (
-				77B76F081B8F435F00114A6F /* RefreshState */,
+				776C11441B913E110071437C /* RefreshControl */,
 				770739391B860C3F003970B7 /* AppDelegate.h */,
 				7707393A1B860C3F003970B7 /* AppDelegate.m */,
 				7707393F1B860C3F003970B7 /* Main.storyboard */,
@@ -126,15 +126,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		77B76F081B8F435F00114A6F /* RefreshState */ = {
+		776C11441B913E110071437C /* RefreshControl */ = {
 			isa = PBXGroup;
 			children = (
-				77B76F091B8F435F00114A6F /* GKIndicatorView.h */,
-				77B76F0A1B8F435F00114A6F /* GKIndicatorView.m */,
-				77B76F0B1B8F435F00114A6F /* UIScrollView+GKRefresh.h */,
-				77B76F0C1B8F435F00114A6F /* UIScrollView+GKRefresh.m */,
+				776C11451B913E110071437C /* GKIndicatorView.h */,
+				776C11461B913E110071437C /* GKIndicatorView.m */,
+				776C11471B913E110071437C /* UIScrollView+GKRefresh.h */,
+				776C11481B913E110071437C /* UIScrollView+GKRefresh.m */,
 			);
-			path = RefreshState;
+			path = RefreshControl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,10 +237,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77B76F0E1B8F435F00114A6F /* UIScrollView+GKRefresh.m in Sources */,
+				776C114A1B913E110071437C /* UIScrollView+GKRefresh.m in Sources */,
 				7707393B1B860C3F003970B7 /* AppDelegate.m in Sources */,
 				7707395D1B860D1E003970B7 /* GKRootViewController.m in Sources */,
-				77B76F0D1B8F435F00114A6F /* GKIndicatorView.m in Sources */,
+				776C11491B913E110071437C /* GKIndicatorView.m in Sources */,
 				770739381B860C3F003970B7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
