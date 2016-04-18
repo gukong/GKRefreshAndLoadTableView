@@ -20,10 +20,10 @@
     [self.view setBackgroundColor:[UIColor whiteColor]];
     // Do any additional setup after loading the view.
     
-    _kTableView = [[UITableView alloc] initWithFrame:self.view.bounds];
+    _kTableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+    [_kTableView setDataSource:self];
     [_kTableView setCanPullDownToRefresh:YES];
     [_kTableView setCanPullUpToLoadMore:YES];
-    [_kTableView setDataSource:self];
     [_kTableView setRefreshControlDelegate:self];
     [self.view addSubview:_kTableView];
 }

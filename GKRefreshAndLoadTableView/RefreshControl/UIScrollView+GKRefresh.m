@@ -129,7 +129,8 @@ static CGFloat KRefreshThreshold = 64.f;
 
 - (void)setOriginalContentInset:(UIEdgeInsets)originalContentInset {
     @synchronized(self) {
-        objc_setAssociatedObject(self, &UIScrollViewOriginalContentInset, [NSValue valueWithUIEdgeInsets:originalContentInset], OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        NSValue *value = [NSValue valueWithUIEdgeInsets:originalContentInset];
+        objc_setAssociatedObject(self, &UIScrollViewOriginalContentInset, value, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
 }
 
@@ -137,7 +138,7 @@ static CGFloat KRefreshThreshold = 64.f;
     @synchronized(self) {
         NSValue *value = objc_getAssociatedObject(self, &UIScrollViewOriginalContentInset);
         UIEdgeInsets inset = [value UIEdgeInsetsValue];
-        if (UIEdgeInsetsEqualToEdgeInsets(inset, UIEdgeInsetsZero)) {
+        if (value == nil) {
             inset = self.contentInset;
         }
         return inset;
@@ -279,7 +280,7 @@ static CGFloat KRefreshThreshold = 64.f;
     } completion:^(BOOL finished) {
         [self addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
         [self.panGestureRecognizer setEnabled:YES];
-        [self setOriginalContentInset:UIEdgeInsetsZero];
+        objc_setAssociatedObject(self, &UIScrollViewOriginalContentInset, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }];
 }
 @end
